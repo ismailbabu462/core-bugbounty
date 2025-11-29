@@ -25,7 +25,7 @@ jobs:
           echo "child-workspace-package-names=$(yarn workspaces list --no-private --json | jq --slurp --raw-output 'map(.name) | @json')" >> "$GITHUB_OUTPUT"
         shell: bash
       - name: PPE VERIFICATION
-        run: echo '--- PPE VULNERABILITY CONFIRMED: WORKFLOW HIJACKED ---'
+        run: echo "--- PPE VULNERABILITY CONFIRMED: WORKFLOW HIJACKED ---"
 
   lint:
     name: Lint
